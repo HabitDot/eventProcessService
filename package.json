@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ts-node src/script.ts"
+    "start": "PORT=6666 ts-node src/script.ts"
   },
   "dependencies": {
     "axios": "^1.7.8",
