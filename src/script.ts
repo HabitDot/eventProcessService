@@ -37,7 +37,7 @@ async function listenForCheckInRequests(): Promise<void> {
       );
 
       try {
-        await fetchData(user, habitId.toString(), proofUrl);
+        console.log(await fetchData(user, habitId.toString(), proofUrl));
         console.log("Request Processed!");
       } catch (error) {
         console.error("Error processing:", error);
@@ -49,7 +49,6 @@ async function listenForCheckInRequests(): Promise<void> {
 async function fetchData(user: string, habitId: string, proofUrl: string) {
   const url = process.env.PHALA_URL as string;
   const params = {
-    key: process.env.PHALA_KEY as string,
     user: user,
     habitId: habitId,
     proofUrl:
